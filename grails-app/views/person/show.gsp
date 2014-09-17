@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${personInstance?.totalEarned}">
+				<li class="fieldcontain">
+					<span id="totalEarned-label" class="property-label"><g:message code="person.totalEarned.label" default="Total Earned" /></span>
+
+						<span class="property-value" aria-labelledby="totalEarned-label"><g:fieldValue bean="${personInstance}" field="totalEarned"/></span>
+
+				</li>
+				</g:if>
+
 			</ol>
 			<g:form url="[resource:personInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
