@@ -31,7 +31,15 @@
 					
 				</li>
 				</g:if>
-			
+                <g:if test="${personInstance?.nickname}">
+                    <li class="fieldcontain">
+                        <span id="name-label" class="property-label"><g:message code="person.nickname.label" default="Nickname" /></span>
+
+                        <span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${personInstance}" field="nickname"/></span>
+
+                    </li>
+                </g:if>
+
 				<g:if test="${personInstance?.email}">
 				<li class="fieldcontain">
 					<span id="email-label" class="property-label"><g:message code="person.email.label" default="Email" /></span>
@@ -41,6 +49,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${personInstance?.totalEarned}">
+				<li class="fieldcontain">
+					<span id="totalEarned-label" class="property-label"><g:message code="person.totalEarned.label" default="Total Earned" /></span>
+
+						<span class="property-value" aria-labelledby="totalEarned-label"><g:fieldValue bean="${personInstance}" field="totalEarned"/></span>
+
+				</li>
+				</g:if>
+
 			</ol>
 			<g:form url="[resource:personInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
