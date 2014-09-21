@@ -11,6 +11,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'nickname', 'error')} required">
+    <label for="name">
+        <g:message code="person.nickname.label" default="Nickname" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:textField name="nickname" required="" value="${personInstance?.nickname}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'email', 'error')} required">
 	<label for="email">
 		<g:message code="person.email.label" default="Email" />
